@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Divider from './components/Divider';
 import IconGithub from './components/IconGithub';
 import IconLinkedin from './components/IconLinkedin';
@@ -7,26 +7,62 @@ import IconTwitter from './components/IconTwitter';
 import Bubble from './components/Bubble';
 import './App.css';
 
+type TSocial = {
+  item: string;
+  link: string;
+};
+type TData = {
+  name: string;
+  presentation: string;
+  location: string;
+  social: TSocial[]
+};
+const compSocial = {
+  linkedin: IconLinkedin,
+  github: IconGithub,
+  twitter: IconTwitter,
+};
+
 function App() {
+  const [data, setData] = useState<TData|null>(null);
+  useEffect(() => {
+    fetch(process.env.REACT_APP_API as string)
+      .then((d) => d.json())
+      .then((d) => {
+        setData(d);
+      });
+  }, []);
+
   return (
     <div className="app">
       <Bubble />
-      <h1>I'm Petherson Moreno</h1>
-      <Divider />
-      <p>
-        Front-end developer. Parent of an one-year-old boy.
-        {' '}
-        Passionate about technologies, learning and teaching a little bit about a lot of things.
-      </p>
-      <Divider />
-      <p>Campinas, São Paulo, Brazil</p>
-      <Divider />
-      <p>Find me on:</p>
-      <div className="social-icons">
-        <a href="http://github.com"><IconGithub /></a>
-        <a href="http://twitter.com"><IconTwitter /></a>
-        <a href="http://linkedin.com"><IconLinkedin /></a>
-      </div>
+      {!data && <h1>Loading ...</h1>}
+      {data && (
+        <>
+          <h1>
+            I'm
+            {' '}
+            {data.name}
+          </h1>
+          <Divider />
+          <p>{data.presentation}</p>
+          <Divider />
+          <p>{data.location}</p>
+          <Divider />
+          <p>Find me on:</p>
+          <div className="social-icons">
+            {data.social.map((itemSocial) => {
+              const IconComponent = (compSocial as any)[itemSocial.item];
+              if (!IconComponent) {
+                return null;
+              }
+              return (
+                <a key={itemSocial.item} href={itemSocial.link}><IconComponent /></a>
+              );
+            })}
+          </div>
+        </>
+      )}
     </div>
   );
 }
