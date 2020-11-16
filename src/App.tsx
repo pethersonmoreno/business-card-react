@@ -13,14 +13,7 @@ type TData = {
 };
 
 function App() {
-  const [data, setData] = useState<TData|null>(null);
-  useEffect(() => {
-    fetch(process.env.REACT_APP_API as string)
-      .then((d) => d.json())
-      .then((d) => {
-        setData(d);
-      });
-  }, []);
+  const data = useData();
 
   return (
     <div className="app">
@@ -43,6 +36,18 @@ function App() {
       )}
     </div>
   );
+}
+
+function useData(): TData|null {
+  const [data, setData] = useState<TData|null>(null);
+  useEffect(() => {
+    fetch(process.env.REACT_APP_API as string)
+      .then((d) => d.json())
+      .then((d) => {
+        setData(d);
+      });
+  }, []);
+  return data;
 }
 
 export default App;
