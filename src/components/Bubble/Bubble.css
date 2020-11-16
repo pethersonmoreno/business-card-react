@@ -1,4 +1,5 @@
 .bubble{
+  position: relative;
   width:300px;
   margin: 0 auto;
   height:300px;
@@ -11,4 +12,23 @@
   color:#FEE150;
   font-size: 4.8em;
   font-weight: bold;
+  overflow: hidden;
+}
+.bubble > .__text {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  width: 100%;
+  transition: transform 1s;
+}
+.bubble > .__text.__mouse-over {
+  top: -20%;
+}
+
+.bubble:hover > .__text.__default {
+  transform: translateX(-210px);
+}
+
+.bubble:hover > .__text.__mouse-over {
+  transform: translateY(180px);
 }
