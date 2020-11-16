@@ -27,9 +27,9 @@ function App() {
             {data.name}
           </h1>
           <Divider />
-          <p>{data.presentation}</p>
+          <p className="presentation">{data.presentation}</p>
           <Divider />
-          <p>{data.location}</p>
+          <p className="location">{data.location}</p>
           <Divider />
           <SocialSection social={data.social} />
         </>
