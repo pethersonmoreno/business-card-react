@@ -1,11 +1,11 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
-import './App.css';
 import Divider from './components/Divider';
-import IconGithub from './assets/images/logo-github.jpg';
-import IconTwitter from './assets/images/logo-twitter.png';
-import IconLinkedin from './assets/images/logo-linkedin.png';
+import IconGithub from './components/IconGithub';
+import IconLinkedin from './components/IconLinkedin';
+import IconTwitter from './components/IconTwitter';
 import Bubble from './components/Bubble';
+import './App.css';
 
 function App() {
   return (
@@ -23,9 +23,9 @@ function App() {
       <Divider />
       <p>Find me on:</p>
       <div className="social-icons">
-        <a href="http://github.com"><img src={IconGithub} alt="Github" /></a>
-        <a href="http://twitter.com"><img src={IconTwitter} alt="Twitter" /></a>
-        <a href="http://linkedin.com"><img src={IconLinkedin} alt="Linkedin" /></a>
+        <a href="http://github.com"><IconGithub /></a>
+        <a href="http://twitter.com"><IconTwitter /></a>
+        <a href="http://linkedin.com"><IconLinkedin /></a>
       </div>
     </div>
   );

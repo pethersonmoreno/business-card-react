@@ -34,7 +34,10 @@ body {
   justify-content: center;
 }
 
-.app > .social-icons > a > img {
-  width: 50px;
+.app > .social-icons > a {
   margin: 0 5px;
+}
+
+.app > .social-icons > a > svg {
+  width: 50px;
 }
