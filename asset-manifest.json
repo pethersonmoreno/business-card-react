@@ -1,22 +1,20 @@
 {
   "files": {
-    "main.css": "/business-card-react/static/css/main.91857f5c.chunk.css",
-    "main.js": "/business-card-react/static/js/main.b3d4f7f3.chunk.js",
-    "main.js.map": "/business-card-react/static/js/main.b3d4f7f3.chunk.js.map",
+    "main.css": "/business-card-react/static/css/main.dda5eda5.chunk.css",
+    "main.js": "/business-card-react/static/js/main.8a1f40cf.chunk.js",
+    "main.js.map": "/business-card-react/static/js/main.8a1f40cf.chunk.js.map",
     "runtime-main.js": "/business-card-react/static/js/runtime-main.8c426e24.js",
     "runtime-main.js.map": "/business-card-react/static/js/runtime-main.8c426e24.js.map",
-    "static/js/2.a2917803.chunk.js": "/business-card-react/static/js/2.a2917803.chunk.js",
-    "static/js/2.a2917803.chunk.js.map": "/business-card-react/static/js/2.a2917803.chunk.js.map",
+    "static/js/2.68df72d7.chunk.js": "/business-card-react/static/js/2.68df72d7.chunk.js",
+    "static/js/2.68df72d7.chunk.js.map": "/business-card-react/static/js/2.68df72d7.chunk.js.map",
     "index.html": "/business-card-react/index.html",
-    "static/css/main.91857f5c.chunk.css.map": "/business-card-react/static/css/main.91857f5c.chunk.css.map",
-    "static/js/2.a2917803.chunk.js.LICENSE.txt": "/business-card-react/static/js/2.a2917803.chunk.js.LICENSE.txt",
-    "static/media/logo-github.eeb17588.jpg": "/business-card-react/static/media/logo-github.eeb17588.jpg",
-    "static/media/logo-twitter.b30749d0.png": "/business-card-react/static/media/logo-twitter.b30749d0.png"
+    "static/css/main.dda5eda5.chunk.css.map": "/business-card-react/static/css/main.dda5eda5.chunk.css.map",
+    "static/js/2.68df72d7.chunk.js.LICENSE.txt": "/business-card-react/static/js/2.68df72d7.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.8c426e24.js",
-    "static/js/2.a2917803.chunk.js",
-    "static/css/main.91857f5c.chunk.css",
-    "static/js/main.b3d4f7f3.chunk.js"
+    "static/js/2.68df72d7.chunk.js",
+    "static/css/main.dda5eda5.chunk.css",
+    "static/js/main.8a1f40cf.chunk.js"
   ]
 }
